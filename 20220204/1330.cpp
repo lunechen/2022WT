@@ -1,3 +1,4 @@
+//LCA 倍增
 #include <cstdio>
 #include <vector>
 using namespace std;
