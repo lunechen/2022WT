@@ -1,0 +1,103 @@
+1144
+Description
+
+A Telephone Line Company (TLC) is establishing a new telephone cable network. They are connecting several places numbered by integers from 1 to N . No two places have the same number. The lines are bidirectional and always connect together two places and in each place the lines end in a telephone exchange. There is one telephone exchange in each place. From each place it is
+possible to reach through lines every other place, however it need not be a direct connection, it can go through several exchanges. From time to time the power supply fails at a place and then the exchange does not operate. The officials from TLC realized that in such a case it can happen that besides the fact that the place with the failure is unreachable, this can also cause that some other places cannot connect to each other. In such a case we will say the place (where the failure
+occured) is critical. Now the officials are trying to write a program for finding the number of all such critical places. Help them.
+Input
+
+The input file consists of several blocks of lines. Each block describes one network. In the first line of each block there is the number of places N < 100. Each of the next at most N lines contains the number of a place followed by the numbers of some places to which there is a direct line from this place. These at most N lines completely describe the network, i.e., each direct connection of two places in the network is contained at least in one row. All numbers in one line are separated
+by one space. Each block ends with a line containing just 0. The last block has only one line with N = 0;
+Output
+
+The output contains for each block except the last in the input file one line containing the number of critical places.
+Sample Input
+
+5
+5 1 2 3 4
+0
+6
+2 1 3
+5 4 6 2
+0
+0
+Sample Output
+
+1
+2
+
+////////////
+
+1330
+Description
+
+A rooted tree is a well-known data structure in computer science and engineering. An example is shown below:
+
+
+In the figure, each node is labeled with an integer from {1, 2,...,16}. Node 8 is the root of the tree. Node x is an ancestor of node y if node x is in the path between the root and node y. For example, node 4 is an ancestor of node 16. Node 10 is also an ancestor of node 16. As a matter of fact, nodes 8, 4, 10, and 16 are the ancestors of node 16. Remember that a node is an ancestor of itself. Nodes 8, 4, 6, and 7 are the ancestors of node 7. A node x is called a common ancestor of two different nodes y and z if node x is an ancestor of node y and an ancestor of node z. Thus, nodes 8 and 4 are the common ancestors of nodes 16 and 7. A node x is called the nearest common ancestor of nodes y and z if x is a common ancestor of y and z and nearest to y and z among their common ancestors. Hence, the nearest common ancestor of nodes 16 and 7 is node 4. Node 4 is nearer to nodes 16 and 7 than node 8 is.
+
+For other examples, the nearest common ancestor of nodes 2 and 3 is node 10, the nearest common ancestor of nodes 6 and 13 is node 8, and the nearest common ancestor of nodes 4 and 12 is node 4. In the last example, if y is an ancestor of z, then the nearest common ancestor of y and z is y.
+
+Write a program that finds the nearest common ancestor of two distinct nodes in a tree.
+
+Input
+
+The input consists of T test cases. The number of test cases (T) is given in the first line of the input file. Each test case starts with a line containing an integer N , the number of nodes in a tree, 2<=N<=10,000. The nodes are labeled with integers 1, 2,..., N. Each of the next N -1 lines contains a pair of integers that represent an edge --the first integer is the parent node of the second integer. Note that a tree with N nodes has exactly N - 1 edges. The last line of each test case contains two distinct integers whose nearest common ancestor is to be computed.
+Output
+
+Print exactly one line for each test case. The line should contain the integer that is the nearest common ancestor.
+Sample Input
+
+2
+16
+1 14
+8 5
+10 16
+5 9
+4 6
+8 4
+4 10
+1 13
+6 15
+10 11
+6 7
+10 2
+16 3
+8 1
+16 12
+16 7
+5
+2 3
+3 4
+3 1
+1 5
+3 5
+Sample Output
+
+4
+3
+
+//////////////
+
+1985
+Description
+
+After hearing about the epidemic of obesity in the USA, Farmer John wants his cows to get more exercise, so he has committed to create a bovine marathon for his cows to run. The marathon route will include a pair of farms and a path comprised of a sequence of roads between them. Since FJ wants the cows to get as much exercise as possible he wants to find the two farms on his map that are the farthest apart from each other (distance being measured in terms of total length of road on the path between the two farms). Help him determine the distances between this farthest pair of farms.
+Input
+
+* Lines 1.....: Same input format as "Navigation Nightmare".
+Output
+
+* Line 1: An integer giving the distance between the farthest pair of farms.
+Sample Input
+
+7 6
+1 6 13 E
+6 3 9 E
+3 5 7 S
+4 1 3 N
+2 4 20 W
+4 7 2 S
+Sample Output
+
+52
