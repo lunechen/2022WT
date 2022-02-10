@@ -1,0 +1,98 @@
+1273
+Description
+
+Every time it rains on Farmer John's fields, a pond forms over Bessie's favorite clover patch. This means that the clover is covered by water for awhile and takes quite a long time to regrow. Thus, Farmer John has built a set of drainage ditches so that Bessie's clover patch is never covered in water. Instead, the water is drained to a nearby stream. Being an ace engineer, Farmer John has also installed regulators at the beginning of each ditch, so he can control at what rate water flows into that ditch.
+Farmer John knows not only how many gallons of water each ditch can transport per minute but also the exact layout of the ditches, which feed out of the pond and into each other and stream in a potentially complex network.
+Given all this information, determine the maximum rate at which water can be transported out of the pond and into the stream. For any given ditch, water flows in only one direction, but there might be a way that water can flow in a circle.
+Input
+
+The input includes several cases. For each case, the first line contains two space-separated integers, N (0 <= N <= 200) and M (2 <= M <= 200). N is the number of ditches that Farmer John has dug. M is the number of intersections points for those ditches. Intersection 1 is the pond. Intersection point M is the stream. Each of the following N lines contains three integers, Si, Ei, and Ci. Si and Ei (1 <= Si, Ei <= M) designate the intersections between which this ditch flows. Water will flow through this ditch from Si to Ei. Ci (0 <= Ci <= 10,000,000) is the maximum rate at which water will flow through the ditch.
+Output
+
+For each case, output a single integer, the maximum rate at which water may emptied from the pond.
+Sample Input
+
+5 4
+1 2 40
+1 4 20
+2 4 20
+2 3 30
+3 4 10
+Sample Output
+
+50
+
+////////////////////////////////////
+
+1469
+Description
+
+Consider a group of N students and P courses. Each student visits zero, one or more than one courses. Your task is to determine whether it is possible to form a committee of exactly P students that satisfies simultaneously the conditions:
+
+every student in the committee represents a different course (a student can represent a course if he/she visits that course)
+each course has a representative in the committee
+Input
+
+Your program should read sets of data from the std input. The first line of the input contains the number of the data sets. Each data set is presented in the following format:
+
+P N
+Count1 Student1 1 Student1 2 ... Student1 Count1
+Count2 Student2 1 Student2 2 ... Student2 Count2
+...
+CountP StudentP 1 StudentP 2 ... StudentP CountP
+
+The first line in each data set contains two positive integers separated by one blank: P (1 <= P <= 100) - the number of courses and N (1 <= N <= 300) - the number of students. The next P lines describe in sequence of the courses �from course 1 to course P, each line describing a course. The description of course i is a line that starts with an integer Count i (0 <= Count i <= N) representing the number of students visiting course i. Next, after a blank, you抣l find the Count i students, visiting the course, each two consecutive separated by one blank. Students are numbered with the positive integers from 1 to N.
+There are no blank lines between consecutive sets of data. Input data are correct.
+Output
+
+The result of the program is on the standard output. For each input data set the program prints on a single line "YES" if it is possible to form a committee and "NO" otherwise. There should not be any leading blanks at the start of the line.
+Sample Input
+
+2
+3 3
+3 1 2 3
+2 1 2
+1 1
+3 3
+2 1 3
+2 1 3
+1 1
+Sample Output
+
+YES
+NO
+
+//////////////////////////////////
+
+1986
+Description
+
+Farmer John's cows refused to run in his marathon since he chose a path much too long for their leisurely lifestyle. He therefore wants to find a path of a more reasonable length. The input to this problem consists of the same input as in "Navigation Nightmare",followed by a line containing a single integer K, followed by K "distance queries". Each distance query is a line of input containing two integers, giving the numbers of two farms between which FJ is interested in computing distance (measured in the length of the roads along the path between the two farms). Please answer FJ's distance queries as quickly as possible!
+Input
+
+* Lines 1..1+M: Same format as "Navigation Nightmare"
+
+* Line 2+M: A single integer, K. 1 <= K <= 10,000
+
+* Lines 3+M..2+M+K: Each line corresponds to a distance query and contains the indices of two farms.
+Output
+
+* Lines 1..K: For each distance query, output on a single line an integer giving the appropriate distance.
+Sample Input
+
+7 6
+1 6 13 E
+6 3 9 E
+3 5 7 S
+4 1 3 N
+2 4 20 W
+4 7 2 S
+3
+1 6
+1 4
+2 6
+Sample Output
+
+13
+3
+36
